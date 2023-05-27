@@ -38,3 +38,24 @@
 .img-ini {
     width: 100%;
 }
+@media screen and (min-width:768px){
+     .menu {
+         height: 100px;
+         background-color: chartreuse;
+     }
+     .conteudo-musica {
+         display: flex;
+         direction: ltr;
+     }
+}
+
+@media screen and (min-width:1024px){
+    .menu {
+        height: 200px;
+        background-color: rgb(183, 0, 255);
+    }
+    .conteudo-musica {
+        display: flex;
+        direction: rtl;
+    }
+}
