@@ -38,24 +38,28 @@
 .img-ini {
     width: 100%;
 }
-@media screen and (min-width:768px){
-     .menu {
-         height: 100px;
-         background-color: chartreuse;
-     }
-     .conteudo-musica {
-         display: flex;
-         direction: ltr;
-     }
-}
+@media screen and (min-width: 768px) {
+    .menu {
+        height: 120px;
+        background-color: blueviolet;
+        color: #FFF;
+        font-size: 32px;
+    }
+    .desc-solo {
+        display: flex;       
+    }
 
-@media screen and (min-width:1024px){
+}
+@media screen and (min-width: 1280px) {
     .menu {
         height: 200px;
-        background-color: rgb(183, 0, 255);
+        background-color: rgb(121, 177, 121);
+        font-size: 64px;
     }
-    .conteudo-musica {
-        display: flex;
-        direction: rtl;
+    .img-ini {
+        width: 50%;
+    }
+    .desc-solo {
+        display: grid;
     }
 }
