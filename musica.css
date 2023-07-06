@@ -101,29 +101,31 @@ ul{
     transform: rotate(+45deg);
     top: 0;
 }
-.conteudo-musica {
-    width: 100vw;
-}
 .rodape {
-    width: 100%;
+    width: 100vw;
     background-color: rgb(188, 204, 221);
     text-align: center;
 }
+
 .desc-estilo {
     width: 100%;
     background-color: tan;
+    grid-area: estilo;
 }
 .desc-solo {
     width: 100%;
     background-color: teal;
+    grid-area: solo;
 }
 .desc-grupo {
     width: 100%;
     background-color: tan;
+    grid-area: grupo;
 }
 .desc-banda {
     width: 100%;
     background-color: teal;
+    grid-area: banda;
 }
 .desc-app {
     width: 100%;
@@ -131,18 +133,6 @@ ul{
 }
 .img-ini {
     width: 100%;
-}
-@media screen and (min-width: 768px) {
-    .menu {
-        height: 120px;
-        background-color: var(--fundo);
-        color: #FFF;
-        font-size: 32px;
-    }
-    .desc-solo {
-        display: flex;       
-    }
-
 }
 @media (min-width: 768px) {
     .nav{
@@ -166,5 +156,13 @@ ul{
     #logo {
         width: 16vh;
         height: 16vh;
+    }
+    .conteudo{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-columns: 
+        "estilo estilo"
+        "solo grupo"
+        "banda app";
     }
 }
