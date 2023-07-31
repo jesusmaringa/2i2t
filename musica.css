@@ -1,12 +1,30 @@
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
 * {
     margin: 0;
     padding: 0;
     overflow: 0;
 }
 :root{
-    --fundo: rgb(4, 0, 255);
+    --fundo: rgb(246, 0, 103);
     --fonte: rgb(255, 255, 255);
-    --hover: rgb(99, 144, 186);
+    --hover: rgb(187, 114, 154);
 }
 body{
     background-color: rgba(252, 253, 255, 0.822);
@@ -101,40 +119,90 @@ ul{
     transform: rotate(+45deg);
     top: 0;
 }
+
+.conteudo-musica {
+    width: 100vw;
+}
+
 .rodape {
     width: 100vw;
     background-color: rgb(188, 204, 221);
     text-align: center;
 }
 
-.desc-estilo {
-    width: 100%;
-    background-color: tan;
-    grid-area: estilo;
+.definicao {
+    display: block;
+    width: 100vw;
+    grid-area: def;
 }
-.desc-solo {
-    width: 100%;
-    background-color: teal;
-    grid-area: solo;
+.img-definicao {
+    display: none;
 }
-.desc-grupo {
-    width: 100%;
-    background-color: tan;
-    grid-area: grupo;
+.descricao {
+    width: 100vw;
 }
-.desc-banda {
-    width: 100%;
-    background-color: teal;
-    grid-area: banda;
+#img-def {
+    width: 80%;
 }
-.desc-app {
-    width: 100%;
-    background-color: tan;
+
+div[class^="item-"]{
+    background-color: rgb(235, 198, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin: 2px;
 }
-.img-ini {
-    width: 100%;
+@media (min-width: 820px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+    }
+    .hamb{
+        display: none;
+    }
+    #logo {
+        width: 24vh;
+        height:24vh;
+    }
+    .conteudo-musica {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "def def";
+    }
+    .definicao {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+    }
+    .descricao {
+        height: 100%;
+        padding: 50px;
+        width: 70vw;
+    }
+    .img-definicao{
+        display: block;
+        text-align: end;
+        height: 30vh;
+        width: 30vw;
+    }
+    .frase-topo {
+        display: block;
+    }
 }
-@media (min-width: 768px) {
+
+@media (min-width: 1024px) {
     .nav{
         max-height: none;
         top: 0;
@@ -157,12 +225,11 @@ ul{
         width: 16vh;
         height: 16vh;
     }
-    .conteudo{
+    .conteudo-musica {
         display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-columns: 
-        "estilo estilo"
-        "solo grupo"
-        "banda app";
+        grid-template-columns: 33% 34% 33%;
+        grid-template-areas: "def def def";
     }
+    
+   
 }
