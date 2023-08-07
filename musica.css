@@ -22,9 +22,10 @@ input,select{vertical-align:middle}
     overflow: 0;
 }
 :root{
-    --fundo: rgb(246, 0, 103);
+    --fundo: rgb(68, 64, 66);
+    --fundo-claro: rgb(207, 207, 207);
     --fonte: rgb(255, 255, 255);
-    --hover: rgb(187, 114, 154);
+    --hover: rgb(143, 140, 141);
 }
 body{
     background-color: rgba(252, 253, 255, 0.822);
@@ -144,14 +145,14 @@ ul{
 #img-def {
     width: 80%;
 }
-
 div[class^="item-"]{
-    background-color: rgb(235, 198, 235);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    margin: 2px;
+    background-color: var(--fundo-claro);
+    margin-top: 2px;
+    height: 300px;
+    grid-area: "item";
+}
+.info {
+    display: grid;
 }
 @media (min-width: 820px) {
     .nav{
@@ -176,11 +177,6 @@ div[class^="item-"]{
         width: 24vh;
         height:24vh;
     }
-    .conteudo-musica {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: "def def";
-    }
     .definicao {
         display: flex;
         width: 100vw;
@@ -199,6 +195,13 @@ div[class^="item-"]{
     }
     .frase-topo {
         display: block;
+    }
+    .info {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "item" "item";
+    }
+    div[class^="item-"]{
+        margin-right: 2px;
     }
 }
 
@@ -224,12 +227,5 @@ div[class^="item-"]{
     #logo {
         width: 16vh;
         height: 16vh;
-    }
-    .conteudo-musica {
-        display: grid;
-        grid-template-columns: 33% 34% 33%;
-        grid-template-areas: "def def def";
-    }
-    
-   
+    }   
 }
